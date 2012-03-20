@@ -1,0 +1,65 @@
+
+
+
+##
+##
+## Below ignore settings come from github
+##
+##
+
+# OS X - https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Xcode - https://github.com/github/gitignore/blob/master/Objective-C.gitignore
+build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+
+# TextMate - https://github.com/github/gitignore/blob/master/Global/TextMate.gitignore
+*.tmproj
+*.tmproject
+tmtags
+
+# vim - https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# NetBeans - https://github.com/github/gitignore/blob/master/Global/NetBeans.gitignore
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Subversion - https://github.com/github/gitignore/blob/master/Global/SVN.gitignore
+.svn/
+
+# Java - https://github.com/github/gitignore/blob/master/Java.gitignore
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+

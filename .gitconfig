@@ -1,0 +1,16 @@
+[user]
+	name = Mike Mayer
+	email = mike@mikemayer.me
+[core]
+	editor = mate
+	excludesfile = /Users/mikem/.global_ignore
+[alias]
+	last = cat-file commit HEAD
+[color]
+	ui = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
