@@ -10,14 +10,3 @@ alias nano="mate"
 
 #set the number of open files to 1024
 ulimit -S -n 1024
- 
-
-
-##
-# Your previous /Users/mikem/.profile file was backed up as /Users/mikem/.profile.macports-saved_2012-03-05_at_20:38:49
-##
-
-# MacPorts Installer addition on 2012-03-05_at_20:38:49: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
