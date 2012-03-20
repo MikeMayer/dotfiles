@@ -1,6 +1,3 @@
-
-
-
 ##
 ##
 ## Below ignore settings come from github
@@ -62,4 +59,3 @@ nb-configuration.xml
 *.jar
 *.war
 *.ear
-
