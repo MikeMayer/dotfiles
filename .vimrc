@@ -62,6 +62,9 @@ if v:version >= 700
   autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
 endif
 
+"NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " mappings
 " toggle list mode
 nmap <LocalLeader>tl :set list!<cr>
