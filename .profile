@@ -1,14 +1,17 @@
-# Mike Mayer's Preferences
 export TERM=xterm-256color
-export PS1="[\033[30;1m\u@\@ \W\e]2;\w\a\033[0m]\n=: "
-export EDITOR="mate"
+export CLICOLOR=1
 
+# Sublime Text
+# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+# http://www.sublimetext.com/docs/2/osx_command_line.html
+export EDITOR="subl -w"
+
+#Aliases
+alias nano="subl"
+alias pico="subl"
 alias ls="ls -G"
 alias ll="ls -Ghla"
-alias pico="mate"
-alias nano="mate"
 
-#set the number of open files to 1024
 ulimit -S -n 1024
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 launchctl setenv PATH $PATH
@@ -16,8 +19,7 @@ launchctl setenv PATH $PATH
 set completion-ignore-case on
 set mark-symlinked-directories on
 
-# git magic
-# Inspired by https://gist.github.com/828432
+#coolguy prompt stuff
 
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	c_reset='\[\e[0m\]'
@@ -35,13 +37,21 @@ else
 	c_split=
 fi
 
+c_arrow=' > '
+
+
 #http://stackoverflow.com/a/2658301/360143
 function evil_git_dirty {
   [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && echo "*"
 }
 
-git_prompt ()
-{
+arrow() {
+	echo '$c_arrow'
+	return 0
+}
+
+
+git_prompt () {
 	if ! git rev-parse --git-dir > /dev/null 2>&1; then
 		tabname '\w'
 		return 0
@@ -68,4 +78,4 @@ function winname {
   printf "\e]2;$1\a"
 }
 
-PROMPT_COMMAND='PS1="${c_split}(${c_user}\u${c_reset}${c_split}@${c_user}\T${c_reset}${c_split}:${c_path}\w${c_split})${c_reset}$(git_prompt)\n${c_split}\$${c_reset} "'
+PROMPT_COMMAND='PS1="${c_split}(${c_user}\T${c_reset}${c_split}:${c_path}\w${c_split})${c_reset}$(git_prompt)\n${c_split}$(arrow)${c_reset} "'
